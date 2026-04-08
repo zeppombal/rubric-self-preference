@@ -1,0 +1,206 @@
+import base.tconf
+
+plan reproduce_paper {
+    # Ground-truth IFEval
+    reach EvaluateIFEvalTrue via 
+        (
+        Generator: 
+            gemma_3_27b_it
+            gemma_3_12b_it
+            gemma_3_4b_it
+            llama_4_maverick_17b_128e_instruct
+            llama_4_scout_17b_16e_instruct
+            qwen3_235b_instruct
+            qwen3_30b_instruct
+            qwen3_4b_instruct
+            gpt_120b_oss
+            gpt_5
+            claude_4_5_haiku
+            claude_4_5_sonnet
+        ) *
+        (
+        Evaluator:
+            gemma_3_27b_it
+            gemma_3_12b_it
+            gemma_3_4b_it
+            llama_4_maverick_17b_128e_instruct
+            llama_4_scout_17b_16e_instruct
+            qwen3_235b_instruct
+            qwen3_30b_instruct
+            qwen3_4b_instruct
+            gpt_120b_oss
+            gpt_5
+            claude_4_5_haiku
+            claude_4_5_sonnet
+        )
+    # IFEval single rubric
+    reach EvaluateIFEval via 
+        (
+        Generator: 
+            gemma_3_27b_it
+            gemma_3_12b_it
+            gemma_3_4b_it
+            llama_4_maverick_17b_128e_instruct
+            llama_4_scout_17b_16e_instruct
+            qwen3_235b_instruct
+            qwen3_30b_instruct
+            qwen3_4b_instruct
+            gpt_120b_oss
+            gpt_5
+            claude_4_5_haiku
+            claude_4_5_sonnet
+        ) *
+        (
+        Evaluator:
+            gemma_3_27b_it
+            gemma_3_12b_it
+            gemma_3_4b_it
+            llama_4_maverick_17b_128e_instruct
+            llama_4_scout_17b_16e_instruct
+            qwen3_235b_instruct
+            qwen3_30b_instruct
+            qwen3_4b_instruct
+            gpt_120b_oss
+            gpt_5
+            claude_4_5_haiku
+            claude_4_5_sonnet
+        )
+    # IFEval all rubrics
+    reach EvaluateIFEvalAR via 
+        (
+        Generator: 
+            gemma_3_27b_it
+            gemma_3_12b_it
+            gemma_3_4b_it
+            llama_4_maverick_17b_128e_instruct
+            llama_4_scout_17b_16e_instruct
+            qwen3_235b_instruct
+            qwen3_30b_instruct
+            qwen3_4b_instruct
+            gpt_120b_oss
+            gpt_5
+            claude_4_5_haiku
+            claude_4_5_sonnet
+        ) *
+        (
+        Evaluator:
+            gemma_3_27b_it
+            gemma_3_12b_it
+            gemma_3_4b_it
+            llama_4_maverick_17b_128e_instruct
+            llama_4_scout_17b_16e_instruct
+            qwen3_235b_instruct
+            qwen3_30b_instruct
+            qwen3_4b_instruct
+            gpt_120b_oss
+            gpt_5
+            claude_4_5_haiku
+            claude_4_5_sonnet
+        )
+    # IFEval pairwise comparison
+    reach EvaluateIFEvalPWC via 
+        (
+        Generator: 
+            gemma_3_27b_it
+            gemma_3_12b_it
+            gemma_3_4b_it
+            llama_4_maverick_17b_128e_instruct
+            llama_4_scout_17b_16e_instruct
+            qwen3_235b_instruct
+            qwen3_30b_instruct
+            qwen3_4b_instruct
+            gpt_120b_oss
+            gpt_5
+            claude_4_5_haiku
+            claude_4_5_sonnet
+        ) *
+        (
+        Evaluator:
+            gemma_3_27b_it
+            gemma_3_12b_it
+            gemma_3_4b_it
+            llama_4_maverick_17b_128e_instruct
+            llama_4_scout_17b_16e_instruct
+            qwen3_235b_instruct
+            qwen3_30b_instruct
+            qwen3_4b_instruct
+            gpt_120b_oss
+            gpt_5
+            claude_4_5_haiku
+            claude_4_5_sonnet
+        )
+    # IFEval direct assessment
+    reach EvaluateIFEvalDA via 
+        (
+        Generator: 
+            gemma_3_27b_it
+            gemma_3_12b_it
+            gemma_3_4b_it
+            llama_4_maverick_17b_128e_instruct
+            llama_4_scout_17b_16e_instruct
+            qwen3_235b_instruct
+            qwen3_30b_instruct
+            qwen3_4b_instruct
+            gpt_120b_oss
+            gpt_5
+            claude_4_5_haiku
+            claude_4_5_sonnet
+        ) *
+        (
+        Evaluator:
+            gemma_3_27b_it
+            gemma_3_12b_it
+            gemma_3_4b_it
+            llama_4_maverick_17b_128e_instruct
+            llama_4_scout_17b_16e_instruct
+            qwen3_235b_instruct
+            qwen3_30b_instruct
+            qwen3_4b_instruct
+            gpt_120b_oss
+            gpt_5
+            claude_4_5_haiku
+            claude_4_5_sonnet
+        )
+    # Healthbench
+    reach EvaluateHealthBench via 
+        (
+        Generator: 
+            gemma_3_27b_it
+            gemma_3_12b_it
+            gemma_3_4b_it
+            llama_4_maverick_17b_128e_instruct
+            llama_4_scout_17b_16e_instruct
+            qwen3_235b_instruct
+            qwen3_30b_instruct
+            qwen3_4b_instruct
+            gpt_120b_oss
+            gpt_5
+            claude_4_5_haiku
+            claude_4_5_sonnet
+        ) *
+        (
+        Evaluator:
+            gemma_3_27b_it
+            gemma_3_12b_it
+            gemma_3_4b_it
+            llama_4_maverick_17b_128e_instruct
+            llama_4_scout_17b_16e_instruct
+            qwen3_235b_instruct
+            qwen3_30b_instruct
+            qwen3_4b_instruct
+            gpt_120b_oss
+            gpt_5
+            claude_4_5_haiku
+            claude_4_5_sonnet
+        )
+    # Healthbench meta-evaluation
+    reach MetaEvaluateHealthBench via
+        (
+        Evaluator:
+            gemma_3_27b_it
+            llama_4_maverick_17b_128e_instruct
+            qwen3_235b_instruct
+            gpt_5
+            claude_4_5_sonnet
+        )
+}
